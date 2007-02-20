@@ -1,12 +1,16 @@
+#!/usr/bin/perl
+
 print "1..6\n";
 
+-d "t" && chdir "t";
+
 { package PlayTab;
-  @ARGV = qw(-test -output t/out.ps -preamble t/ok.pre misc/autumnleaves.dat);
+  @ARGV = qw(-test -output out.ps -preamble ok.pre ../zzexamples/autumnleaves.dat);
   local ($^W) = 0;
-  require "script/playtab";
+  require "../script/playtab";
 }
 
-differ ("t/out.ps", "t/ok.ps") ? print "not " : unlink ("t/out.ps");
+differ ("out.ps", "ok.ps") ? print "not " : unlink ("out.ps");
 print "ok 6\n";
 
 sub differ {
