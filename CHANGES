@@ -1,6 +1,12 @@
+0.05
+
+	Use sharps when transposing up, flats when transposing down.
+
+	Better layout for power chords.
+
 0.04
 
-	Add --trasnpose (global) option.
+	Add --transpose (global) option.
 
 	Merge all examples into a single zzexamples directory.
 
